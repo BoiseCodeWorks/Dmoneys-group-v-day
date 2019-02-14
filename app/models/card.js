@@ -1,7 +1,5 @@
 let id = 0
 
-
-
 export default class Card {
     constructor(data) {
         this.id = this.id || id

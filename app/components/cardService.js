@@ -6,16 +6,27 @@ let _state = {
     ]
 }
 
+let _subscribers = {
+    cards: []
+}
+
+function setState(dataName, val) {
+    _state[dataName] = val
+    _subscribers[dataName].forEach(fn => fn())
+}
 
 //public
 export default class CardService {
     constructor() {
         console.log('card service built')
-
     }
 
     get Cards() {
         return _state.cards.map(card => new Card(card))
+    }
+
+    addSubscriber(dataName, fn) {
+        _subscribers[dataName].push(fn)
     }
 
 }

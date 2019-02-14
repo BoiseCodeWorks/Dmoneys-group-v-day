@@ -8,12 +8,16 @@ function draw() {
     cards.forEach(card => {
         template += card.getTemplate();
     })
-    document.getElementById('cards').innerHTML = template;
+    document.querySelector('#cards').innerHTML = template;
 }
 
 //public
 export default class CardController {
     constructor() {
         console.log('controller built')
+        _cs.addSubscriber('cards', draw)
+        draw()
     }
+
+
 }
