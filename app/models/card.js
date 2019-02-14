@@ -11,10 +11,9 @@ export default class Card {
 
     getTemplate() {
         return/*html*/ `
-        <div class="col-3 text-center bg-dark text-danger shadow">
+        <div class="col-3 ml-1 text-center bg-dark text-danger shadow" data-toggle="tooltip" data-placement="bottom" title="${this.message}">
             <h4>To: ${this.to}</h4>
             <h4>From: ${this.from}</h4>
-            <p>${this.message}</p>
             <button class="btn btn-outline-light bg-dark" id="reject" onclick="app.controllers.cardController.rejectLove(${this.id})">Reject</button>
         </div>`
     }
