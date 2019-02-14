@@ -11,7 +11,29 @@
 </head>
 
 <body>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col text-center">
+                <h1>We love D$</h1>
+            </div>
+        </div>
+    </header>
+    <section class="container-fluid text-center">
+        <div class="row">
+            <div class="col">
+                <form onsubmit="app.controllers.cardController.addCard(event)">
+                    <input type="text" name="to" placeholder="  To..." required>
+                    <input type="text" name="from" placeholder="  From..." required>
+                    <textarea type="text" name="message" placeholder="  Message..." required>
+                <button type="submit" class="btn btn-outline-danger">Send Love</button>
+            </form>
+        </div>
+    </div>
+    <main class="row" id="cards">
+        <!-- mockup for js template -->
 
+    </main>
+</section>
     <script type="module" src="app/main.js"></script>
 </body>
 

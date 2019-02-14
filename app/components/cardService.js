@@ -14,6 +14,10 @@ export default class CardService {
 
     }
 
+    get Cards() {
+        return _state.cards.map(card => new Card(card))
+    }
+
 }
 
 
