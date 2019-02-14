@@ -19,5 +19,16 @@ export default class CardController {
         draw()
     }
 
+    addCard(event) {
+        event.preventDefault();
+        let form = event.target
+        let newCard = {
+            to: form.to.value,
+            from: form.from.value,
+            message: form.message.value
+        }
+        _cs.addCard(newCard)
+        form.reset()
+    }
 
 }

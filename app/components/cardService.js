@@ -29,6 +29,13 @@ export default class CardService {
         _subscribers[dataName].push(fn)
     }
 
+    addCard(newCard) {
+        let card = new Card(newCard)
+        let updatedCards = this.Cards
+        updatedCards.push(card)
+        setState('cards', updatedCards)
+    }
+
 }
 
 
