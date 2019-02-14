@@ -35,6 +35,17 @@ export default class CardService {
         updatedCards.push(card)
         setState('cards', updatedCards)
     }
+    rejectLove(id) {
+        let updatedCards = this.Cards
+        for (let i = 0; i < updatedCards.length; i++) {
+            let card = updatedCards[i]
+            if (card.id == id) {
+                updatedCards.splice(i, 1)
+                break
+            }
+        }
+        setState('cards', updatedCards)
+    }
 
 }
 

@@ -2,7 +2,7 @@ let id = 0
 
 export default class Card {
     constructor(data) {
-        this.id = this.id || id
+        this.id = data.id || id
         this.to = data.to
         this.from = data.from
         this.message = data.message
@@ -15,6 +15,7 @@ export default class Card {
             <h4>To: ${this.to}</h4>
             <h4>From: ${this.from}</h4>
             <p>${this.message}</p>
+            <button class="btn btn-outline-light bg-dark" id="reject" onclick="app.controllers.cardController.rejectLove(${this.id})">Reject</button>
         </div>`
     }
 }

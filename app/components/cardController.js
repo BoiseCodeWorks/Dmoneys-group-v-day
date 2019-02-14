@@ -30,5 +30,7 @@ export default class CardController {
         _cs.addCard(newCard)
         form.reset()
     }
-
+    rejectLove(id) {
+        _cs.rejectLove(id)
+    }
 }
